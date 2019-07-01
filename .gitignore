@@ -3,3 +3,7 @@
 ################################################################################
 
 /.vs/udp_chatrom
+/client/Debug
+/Debug
+/server/Debug
+/server/x64/Debug
