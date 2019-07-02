@@ -157,6 +157,7 @@ int ProcessClientCMD(message* p_msg, const SOCKET fd, sockaddr_in* clientAddr, i
 		uint32_t len = 0;
 		char *mes = Gernarator::messageGernarate("SERVER", user, REGISTER, (const char *)&regrsp, sizeof(regrsp), &len);
 		sendto(fd, (const char*)mes, len, 0, (const sockaddr*)clientAddr, addrLen);
+		delete mes;
 
 	}
 	else if (!scmd.compare(LOGIN)) {
@@ -172,7 +173,7 @@ int ProcessClientCMD(message* p_msg, const SOCKET fd, sockaddr_in* clientAddr, i
 		uint32_t len = 0;
 		char* mes = Gernarator::messageGernarate("SERVER", user, LOGIN, (const char*)& loginrsp, sizeof(loginrsp), &len);
 		sendto(fd, (const char*)mes, len, 0, (const sockaddr*)clientAddr, addrLen);
-
+		delete mes;
 
 		//保存每个登录的用户的信息
 		cout << "用户:" << user << " 已加入." << endl;
