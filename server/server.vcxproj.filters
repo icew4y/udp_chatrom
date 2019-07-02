@@ -13,18 +13,21 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{e7419c86-746e-421c-9160-00b80bc494c3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="server.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="message_buf.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="..\common\message_buf.cpp">
+      <Filter>common</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="message_buf.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="..\common\message_buf.h">
+      <Filter>common</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

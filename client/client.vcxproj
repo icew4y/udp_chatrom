@@ -151,7 +151,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\common\message_buf.cpp" />
     <ClCompile Include="client.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\common\message_buf.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
